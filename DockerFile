@@ -1,0 +1,15 @@
+FROM nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
+
+# Sang Uk Park <parksang1993@gmail.com>
+
+RUN apt-get update && apt-get install -y \
+    curl \
+    ca-certificates \
+    sudo \
+    git \
+    bzip2 \
+    libx11-6 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /sanguk
+WORKDIR /sanguk
